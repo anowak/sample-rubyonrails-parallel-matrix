@@ -39,13 +39,15 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
 group :test do
   gem 'simplecov'
   gem 'simplecov-csv'
-  gem 'minitest-reporters'
+  gem 'rspec_junit_formatter'
 
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber_in_groups', :require => false, :git => 'git://github.com/cloudcastle/cucumber_in_groups.git'
-  gem 'database_cleaner'
+  gem 'capybara'
   gem 'selenium-webdriver'
 end
